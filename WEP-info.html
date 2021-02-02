@@ -35,26 +35,25 @@
 				<a class="nav-link" href="WPA2-info.html">WPA2</a>
 			</li>
 			<li class="navbar-item">
-				<a class="nav-link" href="Equipo.html">Equipo</a>
+				<a class="nav-link" href="Equipo.html">Creditos</a>
 			</li>
 		</ul>
 </div>
 </div>
 </nav>
 
-<!--- Two Column Section -->
 <div class="container-fluid padding">
 	<div class="row padding">
-		<div class="col-md-12 col-lg-6">
-			<img src="img/WEP.png" class="img-fluid">
-		</div>
-		<div class="col-lg-6 pg">
+		<img src="img/WEPicon.png" class="img-fluid center">
+		<div class="col-md-12 col-lg-12 pg">
 			<h2>¿Que es WEP?</h2>
-			<p>Wired Equivalent Privacy (WEP), en español «Privacidad equivalente a cableado», es el sistema de cifrado incluido en el estándar IEEE 802.11 como protocolo para redes Wireless que permite cifrar la información que se transmite. Proporciona un cifrado a nivel 2, basado en el algoritmo de cifrado RC4 que utiliza claves de 64 bits. WEP fue incluido como el método para asegurar la privacidad del estándar original IEEE 802.11 ratificado en septiembre de 1999. WEP usa el algoritmo de cifrado RC4 para la confidencialidad, mientras que el CRC-32 proporciona la integridad. El RC4 funciona expandiendo una semilla ("seed" en inglés) para generar una secuencia de números pseudoaleatorios de mayor tamaño. Esta secuencia de números se unifica con el mensaje mediante una operación XOR para obtener un mensaje cifrado. Uno de los problemas de este tipo de algoritmos de cifrado es que no se debe usar la misma semilla para cifrar dos mensajes diferentes, ya que obtener la clave sería trivial a partir de los dos textos cifrados resultantes. Para evitar esto, WEP especifica un vector de iniciación (IV) de 24 bits que se modifica regularmente y se concatena a la contraseña (a través de esta concatenación se genera la semilla que sirve de entrada al algoritmo).</p>
+			<p>Wired Equivalent Privacy o tambien conocido como Privacidad Equivalente a Cableado (WEP), fue presentado en 1999 y se mantuvo como estandar de seguridad de la red hasta el 2004. WEP es el sistema de cifrado incluido en el estándar IEEE 802.11 como protocolo para redes Wireless que permite cifrar la información que se transmite. Proporciona un cifrado a nivel 2, basado en el algoritmo de cifrado RC4 que utiliza claves de 64 bits. WEP usa el algoritmo de cifrado RC4 para la confidencialidad, mientras que el CRC-32 proporciona la integridad. El RC4 funciona expandiendo una semilla ("seed" en inglés) para generar una secuencia de números pseudoaleatorios de mayor tamaño. Esta secuencia de números se unifica con el mensaje mediante una operación XOR para obtener un mensaje cifrado. Uno de los problemas de este tipo de algoritmos de cifrado es que no se debe usar la misma semilla para cifrar dos mensajes diferentes, ya que obtener la clave sería trivial a partir de los dos textos cifrados resultantes. Para evitar esto, WEP especifica un vector de iniciación (IV) de 24 bits que se modifica regularmente y se concatena a la contraseña (a través de esta concatenación se genera la semilla que sirve de entrada al algoritmo).</p>
 
 			<p>Una clave WEP de 128 bits consiste casi siempre en una cadena de 26 caracteres hexadecimales (0-9, a-f) introducidos por el usuario. Cada carácter representa 4 bits de la clave (4 x 26 = 104 bits). Añadiendo el IV de 24 bits obtenemos lo que conocemos como “Clave WEP de 128 bits”. Un sistema WEP de 256 bits está disponible para algunos desarrolladores, y como en el sistema anterior, 24 bits de la clave pertenecen a IV, dejando 232 bits para la protección. Consiste generalmente en 58 caracteres hexadecimales. (58 x 4 = 232 bits) + 24 bits IV = 256 bits de protección WEP.</p>
 
 			<p>El tamaño de clave no es la única limitación de WEP. Crackear una clave larga requiere interceptar más paquetes, pero hay modos de ataque que incrementan el tráfico necesario. Hay otras debilidades en WEP, como por ejemplo la posibilidad de colisión de IV’s o los paquetes alterados, problemas que no se solucionan con claves más largas.</p>
+
+			<img class="img-fluid" src="img/WEP_algorithm.png">
 
 			<p>En el sistema WEP se pueden utilizar dos métodos de autenticación: Sistema Abierto y Clave Compartida.</p>
 
@@ -83,9 +82,6 @@
 <footer>
 <div class="container-fluid padding">
 <div class="row text-center">
-	<div class="col-md-4">
-		Referencias: IDK.
-	</div>
 	<div class="col-12">
 		<hr class="light-100">
 		<h5>&copy; New Horizons</h5>
