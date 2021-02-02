@@ -42,6 +42,34 @@
 </div>
 </nav>
 
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-md-12 col-lg-6">
+			<img src="img/WPA.png" class="img-fluid">
+		</div>
+		<div class="col-lg-6 pg">
+			<h2>¿Que es WPA?</h2>
+			<p>WEP(Wired Equivalent Privacy o Privacidad Equivalente a Cableado) utiliza el protocolo de integridad de clave temporal (TKIP) para cifrar los datos enviados durante la coneccion, tkip utiliza el mismo algoritmo de cifrado que el utilizado en WEP pero la generación de la clave se realiza de manera diferente. TKIP comienza con una clave temporal de 128 bits que es compartida tanto por el punto de acceso como también por el host, luego combina esta clave temporal con la dirección mac del host y un contador que va aumentando paquete a paquete y luego agrega un vector de iniciación de 48 bits para así crear la clave de cifrado de datos. Para evitar la detección de la clave de cifrado tkip cambia la clave temporal cada 10.000 paquetes lo que produce una nueva clave para cada cliente y la variación de las claves durante la conexión.</p>
+
+			<p>El objetivo de este sistema es proporcionar a la red inalámbrica la misma seguridad que tiene una red cableada (de ahí su nombre).</p>
+
+			<p>Para encriptar mensajes usan claves de 104 o 40 bits (WEP 128 o WEP 64).</p>
+
+			<p>Para autenticar existen dos posibilidades:<br>
+				<ul>
+					<li><b>Sistema abierto u Open system</b> El cliente no se autentica para asociarse con el punto de acceso, pero una vez asociado sí tendrá que tener la clave WEP correcta para poder comunicarse.
+					</li>
+
+					<li><b>Clave precompartida, Pre-Shared Keys o PSK</b> En este caso existe una clave precompartida, que se usa tanto para la autenticación como para el cifrado WEP.
+					</li>
+				</ul>
+				Es aconsejable usar la autenticación de sistema abierto para la autenticación WEP (es decir, sin autenticación), ya que es posible averiguar la clave WEP (que se usará en el cifrado de datos en la red) interceptando los paquetes intercambiados entre equipo y punto de acceso en la fase de autenticación. 
+			</p>
+		</div>
+</div>
+</div>
+<hr class="my-4">
 <!--- Footer -->
 <footer>
 <div class="container-fluid padding">
