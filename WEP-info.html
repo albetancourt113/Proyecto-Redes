@@ -42,6 +42,58 @@
 </div>
 </nav>
 
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-md-12 col-lg-6">
+			<img src="img/WEP.png" class="img-fluid">
+		</div>
+		<div class="col-lg-6 pg">
+			<h2>¿Que es WEP?</h2>
+			<p>Wired Equivalent Privacy (WEP), en español «Privacidad equivalente a cableado», es el sistema de cifrado incluido en el estándar IEEE 802.11 como protocolo para redes Wireless que permite cifrar la información que se transmite. Proporciona un cifrado a nivel 2, basado en el algoritmo de cifrado RC4 que utiliza claves de 64 bits. WEP fue incluido como el método para asegurar la privacidad del estándar original IEEE 802.11 ratificado en septiembre de 1999. WEP usa el algoritmo de cifrado RC4 para la confidencialidad, mientras que el CRC-32 proporciona la integridad. El RC4 funciona expandiendo una semilla ("seed" en inglés) para generar una secuencia de números pseudoaleatorios de mayor tamaño. Esta secuencia de números se unifica con el mensaje mediante una operación XOR para obtener un mensaje cifrado. Uno de los problemas de este tipo de algoritmos de cifrado es que no se debe usar la misma semilla para cifrar dos mensajes diferentes, ya que obtener la clave sería trivial a partir de los dos textos cifrados resultantes. Para evitar esto, WEP especifica un vector de iniciación (IV) de 24 bits que se modifica regularmente y se concatena a la contraseña (a través de esta concatenación se genera la semilla que sirve de entrada al algoritmo).</p>
+
+			<p>Una clave WEP de 128 bits consiste casi siempre en una cadena de 26 caracteres hexadecimales (0-9, a-f) introducidos por el usuario. Cada carácter representa 4 bits de la clave (4 x 26 = 104 bits). Añadiendo el IV de 24 bits obtenemos lo que conocemos como “Clave WEP de 128 bits”. Un sistema WEP de 256 bits está disponible para algunos desarrolladores, y como en el sistema anterior, 24 bits de la clave pertenecen a IV, dejando 232 bits para la protección. Consiste generalmente en 58 caracteres hexadecimales. (58 x 4 = 232 bits) + 24 bits IV = 256 bits de protección WEP.</p>
+
+			<p>El tamaño de clave no es la única limitación de WEP. Crackear una clave larga requiere interceptar más paquetes, pero hay modos de ataque que incrementan el tráfico necesario. Hay otras debilidades en WEP, como por ejemplo la posibilidad de colisión de IV’s o los paquetes alterados, problemas que no se solucionan con claves más largas.</p>
+
+			<p>En el sistema WEP se pueden utilizar dos métodos de autenticación: Sistema Abierto y Clave Compartida.</p>
+
+			<p>Para más claridad hablaremos de la autenticación WEP en el modo de Infraestructura (por ejemplo, entre un cliente WLAN y un Punto de Acceso), pero se puede aplicar también al modo Ad-Hoc.</p>
+
+			<h4>Autenticación de Sistema Abierto</h4>
+			<p>El cliente WLAN no se tiene que identificar en el Punto de Acceso durante la autenticación. Así, cualquier cliente, independientemente de su clave WEP, puede verificarse en el Punto de Acceso y luego intentar conectarse. En efecto, la no autenticación (en el sentido estricto del término) ocurre. Después de la autenticación y la asociación, el sistema WEP puede ser usado para cifrar los paquetes de datos. En este punto, el cliente tiene que tener las claves correctas.</p>
+
+			<h4>Autenticación mediante Clave Compartida</h4>
+			<p>WEP es usado para la autenticación. Este método se puede dividir en cuatro fases:<br>
+				<ul>
+					<li>La estación cliente envía una petición de autenticación al Punto de Acceso.</li>
+
+					<li>El punto de acceso envía de vuelta un reto en texto claro.</li>
+
+					<li>El cliente tiene que cifrar el texto modelo usando la clave WEP ya configurada, y reenviarlo al Punto de Acceso en otra petición de autenticación.</li>
+
+					<li>El Punto de Acceso descifra el texto codificado y lo compara con el texto modelo que había enviado. Dependiendo del éxito de esta comparación, el Punto de Acceso envía una confirmación o una denegación. Después de la autenticación y la asociación, WEP puede ser usado para cifrar los paquetes de datos.</li>
+				</ul>
+			El principal problema radica en que no implementa adecuadamente el vector de iniciación del algoritmo RC4, ya que utiliza un enfoque directo y predecible para incrementar el vector de un paquete a otro. Además existe un problema con el tamaño de los vectores de iniciación. A pesar de que se pueden generar muchos vectores, la cantidad de tramas que pasan a través de un punto de acceso es muy grande, lo que hace que rápidamente se encuentren dos mensajes con el mismo vector de iniciación. Conociendo los IV utilizados repetidamente y aplicando técnicas relativamente simples de descifrado puede finalmente vulnerarse la seguridad implementada. Aumentar los tamaños de las claves de cifrado aumenta el tiempo necesario para romperlo, pero no resulta imposible el descifrado.</p>
+		</div>
+</div>
+</div>
+<hr class="my-4">
+<!--- Footer -->
+<footer>
+<div class="container-fluid padding">
+<div class="row text-center">
+	<div class="col-md-4">
+		Referencias: IDK.
+	</div>
+	<div class="col-12">
+		<hr class="light-100">
+		<h5>&copy; New Horizons</h5>
+	</div>
+</div>
+</div>
+</footer>
+
 
 </body>
 </html>
